@@ -4,7 +4,7 @@ Description: Given an array nums of n integers and an integer target, find three
 
 Solution: iterate the values of the input array changing the closest_sum (using inject) when we get one that is closer to the target. When we iterate nums, we fix the first element of the three and use a two pointer approach to get the other two (two_sum_closest).
 
-Ruby solution:
+Ruby code:
 ````
 # @param {Integer[]} nums
 # @param {Integer} target
