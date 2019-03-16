@@ -15,7 +15,8 @@ Ruby code:
 # @return {String}
 def custom_sort_string(s, t)
     s.split('').each_with_index.with_object({}) { |(c, i), char_order| char_order[c] = i }.tap do |order|
-    return t.split('').map { |e| [e, order[e] || t.size] }.sort_by { |e| e[1] }.map { |e| e[0] }.join
+        return t.split('').map { |e| [e, order[e] || t.size] }
+                          .sort_by { |char, order| order }.map { |char, _| char }.join
     end
 end
 ```
